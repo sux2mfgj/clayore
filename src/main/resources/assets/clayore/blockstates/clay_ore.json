@@ -1,0 +1,6 @@
+{
+    "variants":
+    {
+        "": { "model": "clayore:block/clay_ore" }
+    }
+}
