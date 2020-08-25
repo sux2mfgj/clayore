@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 
-import com.sux2mfgj.clayore.config.Config;
+import dev.sux2mfgj.clayore.config.Config;
 
 import java.util.stream.Collectors;
 

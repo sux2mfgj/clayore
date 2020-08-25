@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 
-import com.sux2mfgj.clayore.config.Config;
+import dev.sux2mfgj.clayore.config.Config;
 
 public class OreGeneration
 {

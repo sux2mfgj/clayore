@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.storage.loot.LootContext;
 
-import com.sux2mfgj.clayore.config.Config;
+import dev.sux2mfgj.clayore.config.Config;
 
 public class ClayOreBlock extends Block
 {

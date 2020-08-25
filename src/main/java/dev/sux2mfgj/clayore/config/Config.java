@@ -1,4 +1,4 @@
-package com.sux2mfgj.clayore.config;
+package dev.sux2mfgj.clayore.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -7,7 +7,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.common.ForgeConfigSpec.IntValue;
 
 import org.apache.commons.lang3.tuple.Pair;
-import com.sux2mfgj.clayore.ClayOre;
+import dev.sux2mfgj.clayore.ClayOre;
 
 @EventBusSubscriber(modid = ClayOre.modid, bus = EventBusSubscriber.Bus.MOD)
 public class Config {
