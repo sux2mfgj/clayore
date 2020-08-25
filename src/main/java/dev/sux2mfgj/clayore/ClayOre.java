@@ -1,4 +1,4 @@
-package com.sux2mfgj.clayore;
+package dev.sux2mfgj.clayore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -14,6 +14,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
+
+import com.sux2mfgj.clayore.config.Config;
 
 import java.util.stream.Collectors;
 
@@ -29,6 +33,8 @@ public class ClayOre
 
     public ClayOre()
     {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC);
+
         clayOreBlock = new ClayOreBlock();
         clayOreBlockItem = new BlockItem(clayOreBlock,
                 new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))

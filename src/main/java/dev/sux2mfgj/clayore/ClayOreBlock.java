@@ -1,4 +1,4 @@
-package com.sux2mfgj.clayore;
+package dev.sux2mfgj.clayore;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -15,6 +15,8 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.storage.loot.LootContext;
+
+import com.sux2mfgj.clayore.config.Config;
 
 public class ClayOreBlock extends Block
 {
@@ -36,7 +38,7 @@ public class ClayOreBlock extends Block
             LootContext.Builder builder)
     {
         ArrayList<ItemStack> drop_list = new ArrayList<ItemStack>();
-        drop_list.add(new ItemStack(Items.CLAY_BALL, 5));
+        drop_list.add(new ItemStack(Items.CLAY_BALL, Config.nClayBallsFromClayOre));
         return drop_list;
     }
 }

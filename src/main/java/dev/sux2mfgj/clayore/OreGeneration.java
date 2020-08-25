@@ -1,4 +1,4 @@
-package com.sux2mfgj.clayore;
+package dev.sux2mfgj.clayore;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -7,6 +7,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
+
+import com.sux2mfgj.clayore.config.Config;
 
 public class OreGeneration
 {
@@ -17,10 +19,12 @@ public class OreGeneration
                 Feature.ORE.withConfiguration(
                     new OreFeatureConfig(
                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                        ClayOre.clayOreBlock.getDefaultState(), 17))
+                        ClayOre.clayOreBlock.getDefaultState(),
+                        Config.clayOreVeinSize))
                 .withPlacement(
                     Placement.COUNT_RANGE.configure(
-                        new CountRangeConfig(20, 0, 0, 128))));
+                        new CountRangeConfig(
+                            Config.nVainsOfClayOre, 20, 20, 256))));
         }
     }
 }
