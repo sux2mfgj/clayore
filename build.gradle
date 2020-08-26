@@ -13,7 +13,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.2'
+def mc_version = '1.15.2'
+def mod_version = '0.1.0'
+version = mc_version + '-' + mod_version
 group = 'dev.sux2mfgj.clayore'
 archivesBaseName = 'clayore'
 

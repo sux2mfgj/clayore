@@ -7,8 +7,10 @@ Published at [curseforge](https://www.curseforge.com/minecraft/mc-mods/clayore).
 
 Latest Release
 -----
-v0.0.2
+v0.1.0
 
 Minecraft Version(s)
 -----
-Minecraft v1.15.2
+- v1.16.2 (TODO)
+- v1.15.2
+- v1.14.4 (TODO)
