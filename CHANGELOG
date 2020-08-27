@@ -1,6 +1,10 @@
 CHANGELOG
 ---
 
+v0.2.0
+---
+Add `Dense Clay Ore` that includes more ore balls than `Clay Ore`.
+
 v0.1.0
 ---
 Add a new recipe, Clay -> Clay ball(x4).

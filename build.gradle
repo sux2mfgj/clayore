@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 def mc_version = '1.15.2'
-def mod_version = '0.1.0'
+def mod_version = '0.2.0'
 version = mc_version + '-' + mod_version
 group = 'dev.sux2mfgj.clayore'
 archivesBaseName = 'clayore'
