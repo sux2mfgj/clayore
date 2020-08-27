@@ -28,8 +28,14 @@ public class ClayOre
 
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
+
+    // Blocks
     public static ClayOreBlock clayOreBlock;
     public static Item clayOreBlockItem;
+
+    public static DenseClayOreBlock denseClayOreBlock;
+    public static Item denseClayOreBlockItem;
+
 
     public ClayOre()
     {
@@ -39,6 +45,11 @@ public class ClayOre
         clayOreBlockItem = new BlockItem(clayOreBlock,
                 new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
                 .setRegistryName(clayOreBlock.getRegistryName());
+
+        denseClayOreBlock = new DenseClayOreBlock();
+        denseClayOreBlockItem = new BlockItem(denseClayOreBlock,
+                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+                .setRegistryName(denseClayOreBlock.getRegistryName());
 
 
         // Register the setup method for modloading
@@ -52,13 +63,17 @@ public class ClayOre
         @SubscribeEvent
         public static void registerBlocks(RegistryEvent.Register<Block> event)
         {
-            event.getRegistry().register(clayOreBlock);
+            event.getRegistry().registerAll(
+                    clayOreBlock,
+                    denseClayOreBlock);
         }
 
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event)
         {
-            event.getRegistry().register(clayOreBlockItem);
+            event.getRegistry().registerAll(
+                    clayOreBlockItem,
+                    denseClayOreBlockItem);
         }
     }
 
