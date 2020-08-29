@@ -36,11 +36,15 @@ public class ClayOre
     public static DenseClayOreBlock denseClayOreBlock;
     public static Item denseClayOreBlockItem;
 
+    public static CompressedClayBlock compressedClayBlock;
+    public static Item compressedClayBlockItem;
+
 
     public ClayOre()
     {
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC);
 
+        // blocks
         clayOreBlock = new ClayOreBlock();
         clayOreBlockItem = new BlockItem(clayOreBlock,
                 new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
@@ -51,6 +55,10 @@ public class ClayOre
                 new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
                 .setRegistryName(denseClayOreBlock.getRegistryName());
 
+        compressedClayBlock = new CompressedClayBlock();
+        compressedClayBlockItem = new BlockItem(compressedClayBlock,
+                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+                .setRegistryName(compressedClayBlock.getRegistryName());
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -65,7 +73,8 @@ public class ClayOre
         {
             event.getRegistry().registerAll(
                     clayOreBlock,
-                    denseClayOreBlock);
+                    denseClayOreBlock,
+                    compressedClayBlock);
         }
 
         @SubscribeEvent
@@ -73,7 +82,8 @@ public class ClayOre
         {
             event.getRegistry().registerAll(
                     clayOreBlockItem,
-                    denseClayOreBlockItem);
+                    denseClayOreBlockItem,
+                    compressedClayBlockItem);
         }
     }
 
