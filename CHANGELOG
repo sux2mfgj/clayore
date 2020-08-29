@@ -1,6 +1,10 @@
 CHANGELOG
 ---
 
+v0.3.0
+---
+Add `Compressed Block` which can craft with 9 clays and vice versa.
+
 v0.2.0
 ---
 Add `Dense Clay Ore` that includes more ore balls than `Clay Ore`.
