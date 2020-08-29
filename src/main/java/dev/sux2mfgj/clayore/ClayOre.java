@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 
-import dev.sux2mfgj.clayore.config.Config;
+//import dev.sux2mfgj.clayore.config.Config;
 
 import java.util.stream.Collectors;
 
@@ -30,35 +30,34 @@ public class ClayOre
     public static final Logger LOGGER = LogManager.getLogger();
 
     // Blocks
-    public static ClayOreBlock clayOreBlock;
-    public static Item clayOreBlockItem;
+    //public static ClayOreBlock clayOreBlock;
+    //public static Item clayOreBlockItem;
 
-    public static DenseClayOreBlock denseClayOreBlock;
-    public static Item denseClayOreBlockItem;
+    //public static DenseClayOreBlock denseClayOreBlock;
+    //public static Item denseClayOreBlockItem;
 
-    public static CompressedClayBlock compressedClayBlock;
-    public static Item compressedClayBlockItem;
-
+    //public static CompressedClayBlock compressedClayBlock;
+    //public static Item compressedClayBlockItem;
 
     public ClayOre()
     {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC);
+        //ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC);
 
         // blocks
-        clayOreBlock = new ClayOreBlock();
-        clayOreBlockItem = new BlockItem(clayOreBlock,
-                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
-                .setRegistryName(clayOreBlock.getRegistryName());
+        //clayOreBlock = new ClayOreBlock();
+        //clayOreBlockItem = new BlockItem(clayOreBlock,
+        //        new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+        //        .setRegistryName(clayOreBlock.getRegistryName());
 
-        denseClayOreBlock = new DenseClayOreBlock();
-        denseClayOreBlockItem = new BlockItem(denseClayOreBlock,
-                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
-                .setRegistryName(denseClayOreBlock.getRegistryName());
+        //denseClayOreBlock = new DenseClayOreBlock();
+        //denseClayOreBlockItem = new BlockItem(denseClayOreBlock,
+        //        new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+        //        .setRegistryName(denseClayOreBlock.getRegistryName());
 
-        compressedClayBlock = new CompressedClayBlock();
-        compressedClayBlockItem = new BlockItem(compressedClayBlock,
-                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
-                .setRegistryName(compressedClayBlock.getRegistryName());
+        //compressedClayBlock = new CompressedClayBlock();
+        //compressedClayBlockItem = new BlockItem(compressedClayBlock,
+        //        new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+        //        .setRegistryName(compressedClayBlock.getRegistryName());
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -72,23 +71,25 @@ public class ClayOre
         public static void registerBlocks(RegistryEvent.Register<Block> event)
         {
             event.getRegistry().registerAll(
-                    clayOreBlock,
-                    denseClayOreBlock,
-                    compressedClayBlock);
+                    //clayOreBlock,
+                    //denseClayOreBlock,
+                    //compressedClayBlock
+                    );
         }
 
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event)
         {
             event.getRegistry().registerAll(
-                    clayOreBlockItem,
-                    denseClayOreBlockItem,
-                    compressedClayBlockItem);
+                    //clayOreBlockItem,
+                    //denseClayOreBlockItem,
+                    //compressedClayBlockItem
+                    );
         }
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        OreGeneration.setupBiomeFeature();
+        //OreGeneration.setupBiomeFeature();
     }
 }

@@ -1,20 +1,20 @@
 Features and Current Status
 ---
 
-- [x] Clay Ore
-    - [x] block
-    - [x] item
-    - [x] world gen
-    - [x] configurable
-- [x] Dense Clay Ore
-    - [x] block
-    - [x] item
-    - [x] world gen
+- [ ] Clay Ore
+    - [ ] block
+    - [ ] item
+    - [ ] world gen
     - [ ] configurable
-- [x] Compressed Clay
-    - [x] block
-    - [x] item
-- [x] Recipes
-    - [x] Clay -> Clay Balls
-    - [x] Clay -> Compressed Clay
-    - [x] Compressed Clay -> Clay
+- [ ] Dense Clay Ore
+    - [ ] block
+    - [ ] item
+    - [ ] world gen
+    - [ ] configurable
+- [ ] Compressed Clay
+    - [ ] block
+    - [ ] item
+- [ ] Recipes
+    - [ ] Clay -> Clay Balls
+    - [ ] Clay -> Compressed Clay
+    - [ ] Compressed Clay -> Clay
