@@ -33,8 +33,8 @@ public class ClayOre
     public static ClayOreBlock clayOreBlock;
     public static Item clayOreBlockItem;
 
-    //public static DenseClayOreBlock denseClayOreBlock;
-    //public static Item denseClayOreBlockItem;
+    public static DenseClayOreBlock denseClayOreBlock;
+    public static Item denseClayOreBlockItem;
 
     //public static CompressedClayBlock compressedClayBlock;
     //public static Item compressedClayBlockItem;
@@ -49,10 +49,10 @@ public class ClayOre
                 new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
                 .setRegistryName(clayOreBlock.getRegistryName());
 
-        //denseClayOreBlock = new DenseClayOreBlock();
-        //denseClayOreBlockItem = new BlockItem(denseClayOreBlock,
-        //        new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
-        //        .setRegistryName(denseClayOreBlock.getRegistryName());
+        denseClayOreBlock = new DenseClayOreBlock();
+        denseClayOreBlockItem = new BlockItem(denseClayOreBlock,
+                new Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+                .setRegistryName(denseClayOreBlock.getRegistryName());
 
         //compressedClayBlock = new CompressedClayBlock();
         //compressedClayBlockItem = new BlockItem(compressedClayBlock,
@@ -71,8 +71,8 @@ public class ClayOre
         public static void registerBlocks(RegistryEvent.Register<Block> event)
         {
             event.getRegistry().registerAll(
-                    clayOreBlock//,
-                    //denseClayOreBlock,
+                    clayOreBlock,
+                    denseClayOreBlock//,
                     //compressedClayBlock
                     );
         }
@@ -81,8 +81,8 @@ public class ClayOre
         public static void registerItems(RegistryEvent.Register<Item> event)
         {
             event.getRegistry().registerAll(
-                    clayOreBlockItem//,
-                    //denseClayOreBlockItem,
+                    clayOreBlockItem,
+                    denseClayOreBlockItem//,
                     //compressedClayBlockItem
                     );
         }
