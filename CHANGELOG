@@ -1,6 +1,10 @@
 CHANGELOG
 ---
 
+v0.4.0
+---
+Add support for silk touch and luck enchants.
+
 v0.3.0
 ---
 Add `Compressed Block` which can craft with 9 clays and vice versa.
