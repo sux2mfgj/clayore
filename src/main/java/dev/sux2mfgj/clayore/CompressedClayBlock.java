@@ -28,13 +28,4 @@ public class CompressedClayBlock extends Block
 
         setRegistryName(new ResourceLocation(ClayOre.modid, "compressed_clay"));
     }
-
-    @Override
-    public List<ItemStack> getDrops(BlockState state,
-            LootContext.Builder builder)
-    {
-        ArrayList<ItemStack> drop_list = new ArrayList<ItemStack>();
-        drop_list.add(new ItemStack(ClayOre.compressedClayBlockItem, 1));
-        return drop_list;
-    }
 }

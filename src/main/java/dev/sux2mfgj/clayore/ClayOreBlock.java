@@ -32,13 +32,4 @@ public class ClayOreBlock extends Block
 
         setRegistryName(new ResourceLocation(ClayOre.modid, "clay_ore"));
     }
-
-    @Override
-    public List<ItemStack> getDrops(BlockState state,
-            LootContext.Builder builder)
-    {
-        ArrayList<ItemStack> drop_list = new ArrayList<ItemStack>();
-        drop_list.add(new ItemStack(Items.CLAY_BALL, Config.nClayBallsFromClayOre));
-        return drop_list;
-    }
 }

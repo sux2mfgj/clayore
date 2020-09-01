@@ -26,13 +26,4 @@ public class DenseClayOreBlock extends Block
 
         setRegistryName(new ResourceLocation(ClayOre.modid, "dense_clay_ore"));
     }
-
-    @Override
-    public List<ItemStack> getDrops(BlockState state,
-            LootContext.Builder builder)
-    {
-        ArrayList<ItemStack> drop_list = new ArrayList<ItemStack>();
-        drop_list.add(new ItemStack(Items.CLAY_BALL, 10));
-        return drop_list;
-    }
 }
