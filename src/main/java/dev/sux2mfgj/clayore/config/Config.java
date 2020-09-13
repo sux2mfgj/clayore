@@ -36,6 +36,7 @@ public class Config {
     public static void bakeConfig() {
         nClayBallsFromClayOre = CLIENT.nClayBallsFromClayOre.get();
         clayOreVeinSize = CLIENT.clayOreVeinSize.get();
+        nVainsOfClayOre = CLIENT.nVainsOfClayOre.get();
     }
 
     public static class ClientConfig {
