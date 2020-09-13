@@ -1,6 +1,12 @@
 CHANGELOG
 ---
 
+v0.6.0
+---
+- Generate Dense clay ore in your world.
+- Fix a bug, some config entries hadn't affected.
+
+
 v0.5.0
 ---
 Support en us lang.
