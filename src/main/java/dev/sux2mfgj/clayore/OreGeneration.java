@@ -1,6 +1,8 @@
 package dev.sux2mfgj.clayore;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.feature.BlockStateFeatureConfig;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -14,17 +16,29 @@ public class OreGeneration
 {
     public static void setupBiomeFeature() {
         for (Biome biome : ForgeRegistries.BIOMES) {
-            biome.addFeature(
-                GenerationStage.Decoration.UNDERGROUND_ORES,
-                Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(
-                        OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                        ClayOre.clayOreBlock.getDefaultState(),
-                        Config.clayOreVeinSize))
-                .withPlacement(
-                    Placement.COUNT_RANGE.configure(
-                        new CountRangeConfig(
-                            Config.nVainsOfClayOre, 20, 20, 256))));
+            addOreGeneration(biome, ClayOre.clayOreBlock.getDefaultState(), 10, 60,
+                    20, 0, 256);
+            addOreGeneration(biome, ClayOre.denseClayOreBlock.getDefaultState(), 10, 20,
+                    10, 0, 20);
         }
+    }
+    
+    private static void addOreGeneration(Biome biome, BlockState defaultState, int vainSize, int vainNum,
+                                         int bottom, int top, int max)
+    {
+        OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(
+                OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                defaultState, vainSize);
+        CountRangeConfig rangeConfig = new CountRangeConfig(
+                vainNum, bottom, top, max
+        );
+        biome.addFeature(
+                GenerationStage.Decoration.UNDERGROUND_ORES,
+                Feature.ORE.withConfiguration(oreFeatureConfig).withPlacement(
+                        Placement.COUNT_RANGE.configure(
+                                rangeConfig
+                        )
+                )
+        );
     }
 }
