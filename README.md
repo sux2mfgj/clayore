@@ -11,6 +11,5 @@ v0.5.0
 
 Minecraft Version(s)
 -----
-- v1.16.2 (TODO)
+- v1.16.1 (WIP)
 - v1.15.2
-- v1.14.4 (TODO)
