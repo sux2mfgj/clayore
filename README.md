@@ -14,7 +14,7 @@ Blocks
 You can mine by any pickaxes, and the ore drops some clays. It will be generated shallow depth underground.
 
 - Dense Clay Ore  
-![dense clay ore](./images/denes_clay_ore.png)  
+![dense clay ore](./images/dense_clay_ore.png)  
 You can mine by any pickaxes. The ore drops more clay, and ore is generated deep underground.
 
 - Compressed Clay  
@@ -25,7 +25,7 @@ Recipe
 ---
 
 - Clay to Clay ball  
-![clay to clay ball](./images/clay_to_clay_ball.png)
+![clay to clay ball](./images/clay_to_clay_balls.png)
 
 - Clay to Compressed Clay  
 ![clay to compressed clay](./images/clay_to_compressed_clay.png)
