@@ -45,8 +45,8 @@ Minecraft Version(s)
 Licenses
 ---
 
-- images (./images/*)
+- images (./images/*)  
 [Mojang Studio](https://account.mojang.com/documents/minecraft_eula)
 
-- source codes (others)
+- source codes (others)  
 [MIT License](./LICENSE)
